@@ -1,0 +1,29 @@
+{
+  "name": "degram-frontend",
+  "version": "1.0.0",
+  "description": "Front end for degram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deybic27/degram-frontend.git"
+  },
+  "keywords": [
+    "instagram",
+    "post",
+    "photo",
+    "follow",
+    "like",
+    "share",
+    "social",
+    "networks"
+  ],
+  "author": "redcode.dr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deybic27/degram-frontend/issues"
+  },
+  "homepage": "https://github.com/Deybic27/degram-frontend#readme"
+}
