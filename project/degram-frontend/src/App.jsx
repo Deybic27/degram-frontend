@@ -1,4 +1,5 @@
 import FeedNews from "./FeedNews.jsx"
+import Login from "./Login.jsx";
 import {
   createBrowserRouter,
   RouterProvider
@@ -11,7 +12,7 @@ const routerFeedNews = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <h1>LOGIN</h1>,
+    element: <Login />,
   },
 ]);
 

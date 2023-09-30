@@ -1,0 +1,115 @@
+@import "./../assets/scss/base/base";
+
+.login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 50px;
+    gap: 10px;
+    &__container {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        border: solid 1px $gray;
+
+        label, input, button, p {
+            font-size: 12px;
+        }
+        &_logo {
+            max-width: 80%;
+            height: 13%;
+            padding-top: 50px;
+            &_img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &_form {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // * {border: solid 1px black;}
+            .form {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                &__group {
+                    width: 80%;
+                    height: auto;
+                    position: relative;
+                    &-label {
+                        width: 90%;
+                        height: 20px;
+                        transform: translateY(13px) translateX(10px);
+                        position: absolute;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    .transform {
+                        font-size: 10px;
+                        transform: translateY(0) translateX(10px);
+                        transition: transform 50ms;
+                    }
+                    &-input {
+                        width: 100%;
+                        height: 40px;
+                        box-sizing: border-box;
+                        padding-left: 10px;
+                        border: solid 1px $gray;
+                        border-radius: 3px;
+                        &:focus {
+                            border: solid 1px $black;
+                            outline: none!important;
+                        }
+                    }
+                    &-btn {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &_separator {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            &_line {
+                width: 40%;
+                height: 1px;
+                border: none;
+                background-color: $gray;
+            }
+        }
+        &_reset {
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &_register {
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 20px 0;
+            font-size: 12px;
+        }
+    }
+}
