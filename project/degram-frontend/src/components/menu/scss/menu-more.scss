@@ -1,0 +1,11 @@
+.more {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (max-width: 657px) {
+    .more {
+        display: none;
+    }
+}

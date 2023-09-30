@@ -1,0 +1,38 @@
+.profile-summary {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 12px;
+    &__image {
+        width: 80px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+    &__info {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        line-height: 15px;
+        &_user {
+            width: 100%;
+        }
+        &_mutual {
+            width: 100%;
+            color: #21354791;
+        }
+    }
+    &__follow {
+        color: #0396f6;
+    }
+}

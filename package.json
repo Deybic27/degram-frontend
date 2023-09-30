@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/Deybic27/degram-frontend/issues"
   },
-  "homepage": "https://github.com/Deybic27/degram-frontend#readme"
+  "homepage": "https://github.com/Deybic27/degram-frontend#readme",
+  "devDependencies": {
+    "sass": "^1.68.0"
+  }
 }

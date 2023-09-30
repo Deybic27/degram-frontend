@@ -1,0 +1,20 @@
+.post-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &__image {
+        width: 35px;
+        display: flex;
+        align-items: center;
+        &_img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    &__more {
+        width: 100%;
+        text-align: end;
+    }
+}

@@ -1,0 +1,28 @@
+.logo {
+    display: flex;
+    align-items: flex-start;
+    &__image {
+        height: 25px;
+        max-width: 100%;
+        max-height: auto;
+    }
+    &__image-mobile {
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .logo {
+        &__image {
+            display: none;
+        }
+        &__image-mobile {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 657px) {
+    .logo {
+        display: none;
+    }
+}

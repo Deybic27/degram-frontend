@@ -1,0 +1,19 @@
+.feed-news {
+    max-width: 100vw;
+    /* height: auto; */
+    display: flex;
+
+    /* margin: 0 auto;
+    padding: 2rem;
+    text-align: center; */
+}
+
+@media (max-width: 657px) {
+    .feed-news {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  

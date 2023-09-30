@@ -1,0 +1,10 @@
+.post-footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    &__save {
+        width: 100%;
+        text-align: end;
+    }
+}

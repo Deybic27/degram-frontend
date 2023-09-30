@@ -1,0 +1,19 @@
+.list_items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 657px) {
+    .list_items {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &__item {
+            &-search {
+                display: none;
+            }
+        }
+    }
+}
