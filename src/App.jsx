@@ -1,9 +1,10 @@
-import FeedNews from "./FeedNews.jsx"
-import Login from "./Login.jsx";
 import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
+import FeedNews from "./FeedNews.jsx"
+import Login from "./Login.jsx";
+import Register from "./Register.jsx";
 
 const routerFeedNews = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const routerFeedNews = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
 

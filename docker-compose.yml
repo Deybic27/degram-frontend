@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+ degram_frontend:
+   image: node:alpine
+   container_name: degram_frontend
+   entrypoint: /bin/sh
+   ports:
+     - 70:70
+   working_dir: /dist
+   volumes:
+     - type: bind
+       source: ./
+       target: /dist
+   tty: true
