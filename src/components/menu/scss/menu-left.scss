@@ -1,3 +1,5 @@
+@import "./../../../assets/scss/base/base";
+
 .menu-left {
     width: max-content;
     height: 100vh;
@@ -11,6 +13,9 @@
     border-right: solid 1px rgba(224, 224, 226, 0.805);
     gap: 20px;
     background-color: #fff;
+    a {
+        color: $black !important;
+    }
 }
 
 @media (max-width: 991px) {
@@ -27,5 +32,7 @@
         bottom: 0;
         padding: 10px;
         border-right: none;
+        position: fixed;
+        top: auto;
     }
 }

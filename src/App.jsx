@@ -5,6 +5,8 @@ import {
 import FeedNews from "./FeedNews.jsx"
 import Login from "./Login.jsx";
 import Register from "./Register.jsx";
+import Profile from "./Profile.jsx";
+import ProfileEdit from "./ProfileEdit.jsx";
 
 const routerFeedNews = createBrowserRouter([
   {
@@ -18,6 +20,16 @@ const routerFeedNews = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
+    children: [
+      {
+        path: "edit",
+        element: <ProfileEdit />,
+      }
+    ]
   },
 ]);
 

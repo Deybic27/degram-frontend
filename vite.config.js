@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   define: {
     'process.env': process.env,
+    'MEDIA_HOST': JSON.stringify('http://127.0.0.1:8000'),
     global: {},
   },
   server: {

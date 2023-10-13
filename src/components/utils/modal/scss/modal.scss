@@ -1,0 +1,60 @@
+@import "./../../../../assets/scss/base/base";
+
+.show {
+    display: flex !important;
+}
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: $black_light;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    .modal {
+        width: 100%;
+        max-width: 300px;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        &-header {
+            width: 90%;
+            height: max-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: solid 1px $gray;
+            padding: 10px 0;
+        }
+        &-body {
+            width: 90%;
+            height: max-content;
+            max-width: 300px;
+            border-bottom: solid 1px $gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &_btn {
+                text-align: center;
+                width: 100%;
+                padding: 10px 0;
+                &:active {
+                    background-color: $gray;
+                }             
+            }
+            input[type="file"] {
+                display: none;
+            }
+        }
+        &-footer {
+            width: 90%;
+            height: max-content;
+            padding: 10px 0;
+        }
+    }
+}

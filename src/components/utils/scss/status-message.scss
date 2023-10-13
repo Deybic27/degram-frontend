@@ -1,0 +1,27 @@
+@import "./../../../assets/scss/base/base";
+
+.show {
+    transform: translateY(0) !important;
+    transition: transform 300ms;
+}
+
+.status-message {
+    width: 100vw;
+    height: max-content;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transform: translateY(100%);
+    transition: transform 300ms;
+    &_content {
+        width: 90%;
+        height: max-content;
+        color: $white;
+    }
+}

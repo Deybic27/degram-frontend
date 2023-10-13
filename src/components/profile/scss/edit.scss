@@ -1,0 +1,16 @@
+@import "./../../../assets/scss/base/base";
+
+.edit-content {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    gap: 20px;
+    .form__group-label {
+        transform: none;
+        position: unset;
+    }
+}
