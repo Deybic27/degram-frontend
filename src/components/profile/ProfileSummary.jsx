@@ -1,21 +1,21 @@
 import "./scss/profile-summary.scss"
 
-function ProfileSummary() {
+function ProfileSummary({username, fullname, urlimage}) {
     return (
         <>
             <article className="profile-summary">
                 <span className="profile-summary__image">
                     <img
                         className="profile-summary__image_img" 
-                        src="/maluma.jpg"
+                        src={`${MEDIA_HOST}/${urlimage}`}
                         alt="Maluma" />
                 </span>
                 <div className="profile-summary__info">
                     <span className="profile-summary__info_user">
-                        <strong>maluma</strong>
+                        <strong>{fullname}</strong>
                     </span>
                     <span className="profile-summary__info_mutual">
-                        paulaleon27
+                        {username}
                     </span>
                 </div>
                 <span className="profile-summary__follow">

@@ -1,28 +1,33 @@
 import "./scss/profile-info.scss"
-import { createContext, useState } from "react";
-import { getUserInfo } from "./js/profile-info";
+import { createContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ProfileImage from "./ProfileImage";
+import * as profile from "./../../assets/js/profile"
 
 const ProfileInfoContext = createContext();
 
 function ProfileInfo() {
-    const [username, setUsername] = useState("");
-    const [image, setImage] = useState("");
-    const [fullname, setFullName] = useState("");
-    const [description, setDescription] = useState("");
-    const [link, setLink] = useState("");
-    const [linkText, setLinkText] = useState("");
 
-    getUserInfo()
-        .then(data => {
-            setUsername(data.username)
-            setImage(`${MEDIA_HOST}/${data.image}`)
-            setFullName(data.fullname)
-            setDescription(data.description)
-            setLink(data.link)
-            setLinkText(data.link_text)
+    const [username, setUsername] = useState();
+    const [image, setImage] = useState();
+    const [fullname, setFullName] = useState();
+    const [description, setDescription] = useState();
+    const [link, setLink] = useState();
+    const [linkText, setLinkText] = useState();
+
+    useEffect(() => {
+        profile.getData()
+            .then(data => {    
+                setUsername(data.username)
+                setImage(MEDIA_HOST + data.image)
+                setFullName(data.fullname)
+                setDescription(data.description)
+                setLink(data.link)
+                setLinkText(data.link_text)
+            })
         })
+
+    
     return(
         <div className="profile-info">
             <span className="profile-info__image">

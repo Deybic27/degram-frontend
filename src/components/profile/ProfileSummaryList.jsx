@@ -1,7 +1,8 @@
+import { useContext } from "react"
 import ProfileSummary from "./ProfileSummary.jsx"
 import "./scss/profile-summary-list.scss"
 
-function ProfileSummaryList() {
+function ProfileSummaryList({profiles}) {
     return (
         <>
             <div className="profile-summary_list">
@@ -13,13 +14,14 @@ function ProfileSummaryList() {
                         Ver todo
                     </span>
                 </div>
-                <ProfileSummary />
-                <ProfileSummary />
-                <ProfileSummary />
-                <ProfileSummary />
-                <ProfileSummary />
-                <ProfileSummary />
-                <ProfileSummary />
+                {profiles.map((profile, index ) => {
+                    return <ProfileSummary
+                            key={profile.id}
+                            username={profile.username}
+                            fullname={profile.fullname}
+                            urlimage={profile.image}
+                        />
+                })}
             </div>
         </>
     )

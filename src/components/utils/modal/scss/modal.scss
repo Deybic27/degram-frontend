@@ -16,7 +16,7 @@
     display: none;
     .modal {
         width: 100%;
-        max-width: 300px;
+        max-width: 444px;
         background-color: $white;
         display: flex;
         flex-direction: column;
@@ -34,7 +34,6 @@
         &-body {
             width: 90%;
             height: max-content;
-            max-width: 300px;
             border-bottom: solid 1px $gray;
             display: flex;
             flex-direction: column;

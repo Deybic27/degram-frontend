@@ -1,8 +1,7 @@
 import { useContext, useRef } from "react"
-import { handleCloseModal } from "./modal/Modal"
 
 function UploadImage({context}) {
-    const { setImage } = useContext(context);
+    const { setImage, setModal } = useContext(context);
     const hiddenFileInput = useRef(null)
     const findImage = (e) => {
         e.preventDefault()
@@ -12,9 +11,9 @@ function UploadImage({context}) {
     const handleChange = (e) => {
         const image = e.target.files[0]
         upload(image)
-            .then(response => setImage(response))
+            .then(response => setImage(MEDIA_HOST + response.replaceAll('"', "")))
             .catch(error => error)
-            handleCloseModal()
+            setModal(<></>)
     }
 
     const upload = (image) => {

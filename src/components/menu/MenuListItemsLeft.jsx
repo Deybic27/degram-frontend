@@ -1,7 +1,27 @@
+import { useEffect, useState } from "react"
 import MenuItem from "./MenuItem.jsx"
 import "./scss/menu-list-items-left.scss"
+import MenuItemProfile from "./MenuItemProfile.jsx"
+import MenuItemCreatePost from "./MenuItemCreatePost.jsx"
+import * as profile from "./../../assets/js/profile"
 
 function MenuListItemsLeft(){
+    const [propsProfile, setPropsProfile] = useState({})
+
+    useEffect(() => {
+        profile.getData()
+            .then(data => {
+                const props = {
+                    id: "profile",
+                    profile: data.username,
+                    text: "Perfil",
+                    link: "/profile",
+                    profileImage: MEDIA_HOST + data.image
+                }
+                setPropsProfile(props)
+
+            })
+    },[profile])
     return (
         <>
             <ul className="list_items">
@@ -40,18 +60,20 @@ function MenuListItemsLeft(){
                     text="Notificaciones"
                     link=""
                 />
-                <MenuItem 
+                <MenuItemCreatePost
                     id="upload"
                     icon="add_box"
                     text="Crear"
                     link=""
                 />
-                <MenuItem 
-                    id="profile"
-                    profile="1234"
-                    text="Perfil"
-                    link="/profile"
-                />
+                <MenuItemProfile
+                    {...propsProfile}
+                    // id="profile"
+                    // profile="1234"
+                    // text="Perfil"
+                    // link="/profile"
+                    >
+                </MenuItemProfile>
             </ul>
         </>
     )

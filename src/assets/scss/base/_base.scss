@@ -10,6 +10,10 @@ button {
     cursor: pointer;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .btn-default {
     padding: 5px 0;
     box-sizing: border-box;

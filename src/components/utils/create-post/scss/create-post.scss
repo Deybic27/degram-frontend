@@ -1,0 +1,26 @@
+@import "./../../../../assets/scss/base/base";
+
+.post-image{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .post-image_container {
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &_img {
+            max-width: 400px;
+            max-height: 400px;
+            object-fit: cover;
+        }
+    }
+}

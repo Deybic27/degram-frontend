@@ -1,6 +1,7 @@
 .logo {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     &__image {
         height: 25px;
         max-width: 100%;

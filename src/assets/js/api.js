@@ -1,4 +1,4 @@
-export function getUserInfo() {
+export function get(url) {
     return new Promise((resolve, reject) => {
         var myHeaders = new Headers();
         
@@ -9,12 +9,12 @@ export function getUserInfo() {
             credentials: 'include'
         };
     
-        fetch("http://127.0.0.1:8000/api/v1/users/profile/info", requestOptions)
+        fetch(url, requestOptions)
             .then(response => {
                 if (response.status == 401) {
                     location.href = "/login"
                 }
-                if (response.status == 200) {
+                if (response.ok) {
                     return response.json()
                 }
             })

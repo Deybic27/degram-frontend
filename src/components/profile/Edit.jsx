@@ -1,12 +1,13 @@
 import "./scss/edit.scss"
 import { useForm } from "react-hook-form"
-import { getUserInfo } from "./js/profile-info";
 import { createContext, useState } from "react";
 import StatusMessage from "../utils/StatusMessage";
+import * as profile from "./../../assets/js/profile"
 
 const EditContext = createContext();
 
 function Edit() {
+
     const [lengthDescription, setLengthDescription] = useState(0)
     const [sendLoading, setSendLoading] = useState("Enviar")
     const [showStatusMessage, setShowStatusMessage] = useState("")
@@ -72,7 +73,8 @@ function Edit() {
             errors
         }
     } = useForm({
-        defaultValues: async () => getUserInfo()
+        defaultValues: async () => profile.getData()
+        .then(data => data)
     });
     
     const onSubmit = async (data) => {
