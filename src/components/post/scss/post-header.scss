@@ -5,12 +5,13 @@
     align-items: center;
     gap: 5px;
     &__image {
-        width: 35px;
         display: flex;
         align-items: center;
         &_img {
-            width: 100%;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
+            object-fit: cover;
         }
     }
     &__more {

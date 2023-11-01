@@ -1,17 +1,17 @@
 import "./scss/post-header.scss"
 
-function PostHeader() {
+function PostHeader({image, username, time}) {
     return (
         <>
             <div className="post-header">
                 <span className="post-header__image">
-                    <img className="post-header__image_img" src="/maluma.jpg" alt="Maluma" />
+                    <img className="post-header__image_img" src={`${MEDIA_HOST}/${image}`} alt="Maluma" />
                 </span>
                 <span className="post-header__user">
-                    maluma
+                    {username}
                 </span>
                 <span className="post-header__elapsed_time">
-                    2d
+                    {time}
                 </span>
                 <span className="post-header__more material-symbols-outlined">
                     more_horiz

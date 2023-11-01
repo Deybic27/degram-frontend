@@ -1,7 +1,16 @@
+import { useEffect, useState } from "react";
 import PostBody from "../post/PostBody"
 import "./scss/profile-posts.scss"
+import * as profile from "./../../assets/js/profile"
 
 function ProfilePosts() {
+    const [ posts, setPosts ] = useState([])
+    useEffect(() => {
+        profile.getPosts()
+            .then(data => {
+                setPosts(data)
+            })
+    }, []);
     return (
         <div className="profile-posts">
             <div className="profile-posts__header">
@@ -11,10 +20,13 @@ function ProfilePosts() {
                 </div>
             </div>
             <div className="profile-posts__content">
-                <PostBody />
-                <PostBody />
-                <PostBody />
-                <PostBody />
+                {posts.map((post, index) => {
+                    console.log(post);
+                    return <PostBody
+                        key={post.id}
+                        path={post.media.path}
+                    />
+                })}
             </div>
         </div>
     )

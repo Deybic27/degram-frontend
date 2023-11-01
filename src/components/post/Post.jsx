@@ -6,12 +6,20 @@ import PostComment from "./PostComment.jsx"
 
 import "./scss/post.scss"
 
-function Post() {
+function Post({post}) {
+    console.log(post);
     return (
         <>
             <article className="post">
-                <PostHeader />
-                <PostBody />
+                <PostHeader
+                    image={post.user.image}
+                    username={post.user.username}
+                    created_at={post.created_at}
+                    time={post.time}
+                />
+                <PostBody
+                    path={post.media.path}
+                />
                 <PostFooter />
                 <PostInfo />
                 <PostComment />

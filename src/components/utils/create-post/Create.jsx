@@ -61,10 +61,6 @@ function Create({context}) {
 
     const handlePublish = () => {
         const description = document.getElementById("description")
-        // console.log("Publicando...");
-        // console.log(file);
-        // console.log(description.value);
-        // console.log(formatImage.type);
         createPost(file, formatImage.type, description.value)
             .then(result => {
                 setStep(<Status type="success" />)
